@@ -153,8 +153,8 @@ label {
     cursor: pointer;
 }
 
-label::after {
-    content: " ";
+label span {
+
     display: block;
     height: 0.35rem;
     width: 2rem;
@@ -163,64 +163,44 @@ label::after {
     transition: 0.3s;
 }
 
-#slide1:checked~.slider__bottom .slider__controls label:nth-of-type(1)::after,
-#slide2:checked~.slider__bottom .slider__controls label:nth-of-type(2)::after,
-#slide3:checked~.slider__bottom .slider__controls label:nth-of-type(3)::after,
-#slide4:checked~.slider__bottom .slider__controls label:nth-of-type(4)::after,
-#slide5:checked~.slider__bottom .slider__controls label:nth-of-type(5)::after {
+#slide1:checked~.slider__bottom .slider__controls label:nth-of-type(1) span,
+#slide2:checked~.slider__bottom .slider__controls label:nth-of-type(2) span,
+#slide3:checked~.slider__bottom .slider__controls label:nth-of-type(3) span,
+#slide4:checked~.slider__bottom .slider__controls label:nth-of-type(4) span,
+#slide5:checked~.slider__bottom .slider__controls label:nth-of-type(5) span {
     opacity: 1;
 }
 
-#slide1:checked~.slider__bottom .slider__controls label:nth-of-type(1):hover::after,
-#slide2:checked~.slider__bottom .slider__controls label:nth-of-type(2):hover::after,
-#slide3:checked~.slider__bottom .slider__controls label:nth-of-type(3):hover::after,
-#slide4:checked~.slider__bottom .slider__controls label:nth-of-type(4):hover::after,
-#slide5:checked~.slider__bottom .slider__controls label:nth-of-type(5):hover::after {
+#slide1:checked~.slider__bottom .slider__controls label:nth-of-type(1):hover span,
+#slide2:checked~.slider__bottom .slider__controls label:nth-of-type(2):hover span,
+#slide3:checked~.slider__bottom .slider__controls label:nth-of-type(3):hover span,
+#slide4:checked~.slider__bottom .slider__controls label:nth-of-type(4):hover span,
+#slide5:checked~.slider__bottom .slider__controls label:nth-of-type(5):hover span {
     opacity: 0.85;
 }
 
-.slider__controls label:hover:after {
+.slider__controls label:hover span {
     opacity: 0.6;
 }
 
-#slide1:checked~.slider__items {
+#slide1:checked~.slider__items, #slide1:checked~.slider__bottom .slider__texts-wrapper .slider__texts {
     transform: translateX(0%);
 }
 
-#slide2:checked~.slider__items {
+#slide2:checked~.slider__items, #slide2:checked~.slider__bottom .slider__texts-wrapper .slider__texts {
     transform: translateX(-100%);
 }
 
-#slide3:checked~.slider__items {
+#slide3:checked~.slider__items, #slide3:checked~.slider__bottom .slider__texts-wrapper .slider__texts {
     transform: translateX(-200%);
 }
 
 #slide4:checked~.slider__items,
-#slide4:checked~.slider__texts {
-    transform: translateX(-300%);
-}
-
-#slide5:checked~.slider__items,
-#slide5:checked~.slider__texts {
-    transform: translateX(-400%);
-}
-
-#slide1:checked~.slider__bottom .slider__texts-wrapper .slider__texts {
-    transform: translateX(0%);
-}
-
-#slide2:checked~.slider__bottom .slider__texts-wrapper .slider__texts {
-    transform: translateX(-100%);
-}
-
-#slide3:checked~.slider__bottom .slider__texts-wrapper .slider__texts {
-    transform: translateX(-200%);
-}
-
 #slide4:checked~.slider__bottom .slider__texts-wrapper .slider__texts {
     transform: translateX(-300%);
 }
 
+#slide5:checked~.slider__items,
 #slide5:checked~.slider__bottom .slider__texts-wrapper .slider__texts {
     transform: translateX(-400%);
 }
@@ -342,7 +322,7 @@ label::after {
         padding: 3% 3%;
     }
 
-    .slider__control-item {
+    label span {
         height: 0.3rem;
         width: 1.5rem;
     }
